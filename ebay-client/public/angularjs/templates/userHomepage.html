@@ -1,0 +1,40 @@
+ <div ng-include ="'../angularjs/templates/header.html'">
+ 	
+ </div>
+<section ng-hide="childShow" class="userHome-card">
+	<div class="page-header" text-center>
+		<h3>All Advertisements</h3>
+	</div>
+	<div class="all-adv">
+		<div ng-repeat="adv in advertisement" class="adv-card">
+			<div class="img-card">
+				
+			</div>
+			<div class="item-content">
+				<div class="item"  >
+					<span class="item-title">{{adv.itemName}}</span> | <span class="item-detail">{{adv.description}}</span>
+				</div>
+				<div ng-show="adv.fixedPrice" class="item-price">
+					Price : <strong>${{adv.fixedPrice}}</strong>
+				</div>
+				<div ng-show="adv.auctionPrice" class="item-price">
+					Auction Starting Price : <strong>${{adv.auctionPrice}}</strong>
+				</div>
+				<div class="item-seller" >
+					Seller : <span class="seller-name">{{adv.firstname}} {{adv.lastname}}  </span> 
+					<span class="seller-location">{{adv.state}} </span>
+				</div>
+				<div  class="item-button">
+					<button  ng-hide="adv.auctionPrice" ng-click ="buyItem(adv)" class="btn buttonSelected btn-primary">Buy</button>
+					<button  ng-show="checkWon(adv)" class="btn btn-primary buttonSelected"  ng-click="bidPrice(adv)"  >Bid</button>
+					<button  ng-if="useremail==adv.bid_by" ng-click ="buyItem(adv)" class="btn buttonSelected btn-primary">Buy Winner</button>
+					<strong><span  ng-show="adv.bid_price" class=" winner-bid"  >Bid over best bid was {{adv.bid_price}}</span></strong>
+
+			    </div>
+			   
+			</div>
+
+		</div>
+	</div>
+</section>
+<div ui-view></div>

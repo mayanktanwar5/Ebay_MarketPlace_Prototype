@@ -1,0 +1,47 @@
+<section class="card ">
+<div class="main-logo"> 
+ <a ui-sref="home"><img class="ebay-logo" src="./images/ebay-logo.png" ></a>
+</div>
+<div class="ebay-form-main">
+ <div class="ebay-form-title form-text text-center">
+ 	<h4>Create Sell Profile</h4>
+ </div>
+ <form name="ebayform"   >
+	<div class="ebay-form">
+	 <div class="form-text form-country">
+	   <select name="country" class="form-control" ng-model="user.country">
+	   	 <option>United States</option>
+	   	 <option>India</option>
+	   </select>
+     </div>
+     <div class="form-text form-address1">
+      <input type="text" class="form-control" name="address1" placeholder="Street address1" required ng-model="user.address1">
+      <span class="form-error" ng-show="ebayform.adddress1.$touched && ebayform.address1.$invalid">Please enter an address</span>
+     </div> 
+     <div class="form-text form-address2">
+      <input type="text" class="form-control" placeholder="Street address2" ng-model="user.address2">
+     </div>
+     <div class="form-text form-city">
+      <input type="text" class="form-control" placeholder="City" name ="city" ng-model="user.city">
+      <span class="form-error" ng-show="ebayform.city.$touched && ebayform.city.$invalid">Please enter a city</span>
+     </div>
+	 <div class="form-name ">
+      <div class="form-text form-state">
+        <input type="date" class="form-control" name="state" placeholder="State" ng-model="user.bday">
+        <span class="form-error" ng-show="ebayform.state.$touched && ebayform.state.$invalid">Please enter your birthday</span>
+       </div>
+	   <div class="form-text form-state">
+        <input type="text" class="form-control" name="state" placeholder="State" ng-model="user.state">
+        <span class="form-error" ng-show="ebayform.state.$touched && ebayform.state.$invalid">Please enter a state</span>
+       </div>
+       <div class="form-text form-zipCode">
+        <input type="text" class="form-control" name="zipCode" placeholder="ZIP Code" ng-model="user.zipCode">
+        <span class="form-error" ng-show="ebayform.zipCode.$touched && ebayform.zipCode.$invalid">Please enter a valid postal Code</span>
+       </div>
+     </div>
+     <div class="form-text">
+     	<a type="submit" ng-disable="ebayform.$invalid"  ng-click="userCreateProfile()" class="btn form-control btn-primary">Conitnue</a>
+     </div>
+	</div>
+ </form>
+</div>

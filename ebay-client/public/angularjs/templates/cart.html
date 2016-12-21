@@ -1,0 +1,52 @@
+<div ng-show="noItems" class="empty-cart ">
+	<div class="empty-content">
+	<h1>No items in cart   , start shopping</h1>
+	<a ui-sref="userHome" class ="btn shopnow btn-success" >Start Shopping </a>
+	 </div>
+</div>
+
+<div ng-show =" haveItems" class="sho">
+<div ng-include ="'../angularjs/templates/header.html'">
+ 	
+ </div>
+<section class="cart-card">
+
+
+<div   class="item-in-cart row">
+	<div class="col-md-6 col-lg-6">
+		<div class="my-items "  ng-repeat ="adv in advertise">
+			
+				 <div class="cart-item-content ">
+				 	<div class="cart-item-name itemspace"  >
+					 <strong>   Name :</strong>	{{adv.itemName}}
+				 </div>
+				 <div class="cart-item-quantity itemspace">
+						<strong>  Quantity Selected :</strong> {{adv.quantity}}
+				 </div>
+				 <div   class="cart-item itemspace">
+						<strong>  Unit Price : US$</strong> {{adv.fixedPrice}}
+					</div>
+					<strong>  Item total Price for {{adv.quantity}} :</strong> US${{adv.fixedPrice*adv.quantity}}	
+					<div class="itemspace text-center">		
+					 <button class ="btn btn-warning buttonSelected "   ng-click ="removeItem(adv)" >Remove </button>
+					 </div>
+				 </div>
+		</div>
+	</div>
+	<div class="subtotal col-md-6 col-lg-6"> 
+			<h1>Your Cart Total </h1>
+		<div class="summary">
+			<h3>Total Items	:  {{totalItems}}</h3>
+			<h4>Amount to Pay:  US$ {{totalPrice}}</h4>
+		</div>
+		<div class=" text-center itemspace">
+			<button class="btn button-remove btn-warning " ng-click ="checkout()" >Checkout</button>
+		</div>
+	</div>
+	
+
+</div>	
+
+</section>
+
+</div>

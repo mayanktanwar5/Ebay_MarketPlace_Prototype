@@ -1,0 +1,65 @@
+
+<div ng-show ="success" class="banner">
+	<div class="background">
+		
+		<div class="main-msg">
+			
+			<h1> Thanks for buying from ebay </h1>
+			 <a  ui-sref="userHome" class="btn btn-success shopnow"> Continue Shopping </a>
+		</div>
+
+	</div>
+
+
+</div>
+<div ng-include ="'../angularjs/templates/header.html'">
+ 	
+ </div>
+
+<div ng-show="showcredit" class="container">
+		<div class="payment-method">
+			<form     name ="creditDetails" novalidate class="credit-details"  >
+				<div class="row">
+				<div class="col-md-12">
+				<h4>{{payment.cardNumber}}</h4>
+				<span class="floating-label">
+					
+					<input type="number" ng-minLength="16"  ng-change="numberCheck()" 	 class="form-control" name="cardNumber" id="card-number"  ng-model="payment.cardNumber" required="true" >
+					<label for="cardNumber" class="p">Card number</label>
+					<span class ="payment-error" ng-show="creditDetails.cardNumber.$invalid &&creditDetails.cardNumber.$dirty" >Please enter a 16 digit card number</span>
+				</span>	
+				</div>
+				</div>
+				<div class="row ">
+				 <div class="col-md-6">
+				  <input type="number" 	ng-change="expireDate()" class="form-control"  id="card-date" name="cardDate" ng-model="payment.expirationDate" ng-required="true" placeholder="">
+				  <label for="cardDate" class="s">Expiration date</label> 
+				  <span class ="payment-error" ng-show="securityMonth" >Month not correct, Format MMYY </span>
+				  <span class ="payment-error" ng-show="securityYear" >Year not correct, Format MMYY </span>
+				 </div>
+				 <div class="col-md-6">
+				  <input type="number" ng-minLength="3" ng-change="codeCheck()"	class="form-control"   id="card-cvv"  name="cardCvv" ng-model="payment.securityCode" ng-required="true" placeholder="">
+				  <label for="cardCvv" class="s">Security code</label>
+				  <span class ="payment-error" ng-show="securityError" >Please enter a 3 or 4 security code </span>
+
+				 </div>
+				</div>
+				<div class="row ">
+				 <div class="col-md-6">
+				  <input type="text" 	ng-pattern="/^[a-zA-Z]*$/" class="form-control"  id= "first-name" name="onCardfirstName" ng-required="true" ng-model="payment.onCardFirstName" ng-required="true" placeholder="">
+				  <label for="onCardfirstName" class="s" >First name </label>
+				  <span class ="payment-error" ng-show="creditDetails.onCardfirstName.$invalid &&creditDetails.onCardfirstName.$dirty" >First name on card </span>
+				  <span class ="payment-error" ng-show="creditDetails.onCardfirstName.$invalidPattern &&creditDetails.onCardfirstName.$dirty" >Name should be characters</span>
+				 </div>
+				 <div class="col-md-6">
+				  <input type="text" 	ng-pattern="/^[a-zA-Z]*$/" class="form-control" id="last-name" name="onCardLastName" ng-required="true" ng-model="payment.onCardLastName" ng-required="true" placeholder="">
+				  <label for="onCardLastName" class="s" >last name</label>
+				  <span class ="payment-error" ng-show="creditDetails.onCardLastName.$invalid &&creditDetails.onCardLastName.$dirty" >Last name on card</span>
+				 </div>
+				</div>
+				<div class="row">
+					<button type="submit" ng-disabled ="creditDetails.$invalid " ng-click="bought()" class="btn  btn-primary">Done</button>
+				</div>
+			</form>
+		</div>
+	</div>

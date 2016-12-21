@@ -1,0 +1,70 @@
+<section class="card">
+<div class="main-logo"><a ui-sref="home"><img class="ebay-logo" src="./images/ebay-logo.png" ></a></div>
+<div class="ebay-form-main">
+	<div class="navigation">
+		<a ui-sref="login">
+			<div class="btn-signin">
+			<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+			<span class="signin-text tab-disable">Sign in</span>	
+			</div>
+		</a>	
+		<div class="btn-signup">
+			<i class="fa fa-plus-circle" aria-hidden="true"></i>
+			<span class="signin-text ">Register</span>	
+		</div>
+	</div>
+	<form name="ebayform "   novalidate ng-submit="userRegister()">
+		<div class="ebay-form " >
+			<div class="form-email form-text">
+			 <input type="email" max-length="64" name="email" class="form-control" placeholder="Email"  ng-model="user.email" required>
+			 <!-- <span class="form-error" ng-show="(user.email).length < 5 ">Please enter more than 5 characters</span> -->
+			  <span class="form-error" ng-show="ebayform.email.$touched && ebayform.email.$invalid">Please enter a valid email address</span> 
+			 <!-- <span class="form-error" ng-show="ebayform.email.$error.required">Please enter your email address</span> -->
+			</div>
+			<div class="form-reenter-email form-text">
+			 <input type="email"  ng-focus ="value = user.email" ng-blur ="value=user.reenteremail" name="reenteremail" class="form-control" placeholder="Reenter Email" ng-model="user.reenteremail" required>
+			 <span class="form-error" ng-if="user.email!==value">Looks like these email addresses don’t match</span>
+			 <span class="form-error" ng-show="emailTaken">Email already registered </span>
+			 <span class="form-error" ng-show="ebayform.reenteremail.$touched && ebayform.reenteremail.$invalid">Don't forget to reenter your email address!</span>
+			</div>
+			<div class="form-password form-text">
+			 <input type="{{passwordType}}" ng-focus="req=1" ng-blur="req=0" class="form-control" name="password" placeholder="Password" ng-model="user.password" ng-minlength="6" ng-required="true">
+			 <div class="form-pwd-show">
+			 	<input type="checkbox"  id="form-pwd-show" ng-click="hideShow()"><span>{{pwdMsg}}</span>
+
+			 </div>
+			 <span class="form-error" ng-show =" ebayform.password.$touched && ebayform.password.$invalid ">Please enter your password</p></span>
+			</div>
+			<div class=" form-pwd-requirement"  ng-show="req">
+			 	<ul>
+			 		<li>Use 6 to 64 characters</li>
+			 		<li>Besides letters, include atleast a number or symbol (!@#$%^*-
+			 		-+=). </li>
+			 		<li>Password is case sensitive</li>
+			 		<li>Avoid using the same password for multiple sites</li>
+			 	</ul>
+			 </div>
+			<div class="form-name ">
+				<div class="form-first-name form-text">
+					<input type="text" class="form-control" name="firstname" placeholder="First name" required ng-model="user.firstname">
+					<span class="form-error" ng-show =" ebayform.firstname.$touched && ebayform.firstname.$invalid ">Please enter your first name.</span>
+				</div>
+				<div class="form-last-name form-text">
+					<input type="text" class="form-control" name ="lastname" placeholder="Last name"  required ng-model="user.lastname">
+					<span class="form-error" ng-show =" ebayform.lastname.$touched && ebayform.lastname.$invalid ">Please enter your last name.</span>
+				</div>
+			</div>
+			<div class="form-phone-number form-text">
+				<input type="text"  ng-change=checkCount() value="user.mobile" max-length="10" class="form-control" name="phone" required placeholder="Mobile phone" ng-model="user.mobile">
+				<span class="form-error" ng-show="ebayform.phone.$touched && ebayform.phone.$invalid ">We'll use this if you forget your password</span>
+			</div>
+			<div class="form-terms ">
+				By <strong>Registering</strong>, you agree that you've read and accepted our User Agreement, you're at least 18 years old, and you consent to our Privacy Notice and receiving marketing communications from us.
+			</div>
+			<div class="form-text text-center">
+			 <button  class="btn form-control form-btn form-group btn-primary " ng-disabled="ebayform.$invalid" type="submit">Register</button>
+			</div>
+		</div>
+	</form>
+</div>	
+</section>

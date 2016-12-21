@@ -1,0 +1,121 @@
+
+<section  ng-show="showProfile" class="profile-card">
+	
+	<div class="back-banner">
+	</div>	
+		<div class="user-avatar-tab">
+			<div class="user-avatar-con">
+				<div class="user-avatar">
+					<img  height="150px" width ="150px" src="../images/avatar.png" alt="">
+				</div>
+			</div>
+			<div class="profile-name">
+				{{userProfileData.firstname }} {{userProfileData.lastname}}
+			</div>
+			<div class="profile-edit">
+				<button class="btn btn-primary edit">Edit Profile</button>
+			</div>
+		</div>	
+	
+	<ul class="member-info">
+		<li>Member Since : <strong>{{userProfileData.account_created}}</strong></li>
+		<li id="profile-state"><i class="fa fa-map-marker" aria-hidden="true"></i> {{userProfileData.country}}</li>
+		<li>Your  Birthday : <strong>{{userProfileData.birthday}}</strong></li>
+	</ul>
+
+	<div class="profile-content">
+		<div class="items-sale page-header">
+			<h2>Items for sale (<a ng-click="showAll()">{{totalItems}}</a>)</h2>
+			<span ng-show=""> <a ui-sref="sell">Start Selling  on ebay Today</a></span>
+		</div>
+	</div>
+
+
+</section>
+
+<section ng-show="showSale" class="showSale">
+	
+	<div class="salenav">
+		
+		<ul><li><a ng-click="showItems('all')"  ng-class="selectedall" class="salebtn btn btn-primary">ALl listing</a></li><li><a ng-click="showItems('auctions')" ng-class="selectedauc" class="salebtn btn btn-primary">Auctions</a></li><li><a ng-class="selectedbuy" ng-click="showItems('buyItem')" class="salebtn btn btn-primary">Buy It Now</a></li></ul>
+
+	</div>
+
+	<div ng-show="allsale" class="allSale-list">
+	<div class="page-header">
+		<h5>All listing</h5>
+	</div>
+		<div ng-repeat="adv in userSaleData track by $index" class="adv-card-sale">
+			<div class="img-card-sale">
+				
+			</div>
+			<div class="item-content-sale">
+				<div class="item"  >
+					<span class="item-title">{{adv.itemName}}</span> | <span class="item-detail">{{adv.description}}</span>
+				</div>
+				<div ng-show="adv.fixedPrice" class="item-price">
+					Buy it Now Price : <strong>${{adv.fixedPrice}}</strong>
+				</div>
+				<div ng-show="adv.auctionPrice" class="item-price">
+					Auction Starting : <strong>${{adv.auctionPrice}}</strong>
+				</div>
+				<div ng-show="adv.fixedQuantity" class="item-price">
+					 Quantity left : <strong>${{adv.fixedQuantity}}</strong>
+				</div>
+				<div style="font-size: 12px" ng-if="adv.fixedQuantity<=0 && adv.auctionPrice<=0" class="item-price">
+					  <strong>Sold out</strong>
+				</div>
+
+
+			</div>
+
+		</div>
+	</div>
+
+	<div ng-show="allauctions" class="allSale-list">
+		<div class="page-header">
+			<h5>All Auctions</h5>
+		</div>
+		<div ng-repeat="adv in userSaleData " data-ng-if ="adv.auctionPrice >0 " class="adv-card-sale">
+			<div class="img-card-sale">
+				
+			</div>
+			<div class="item-content-sale">
+				<div class="item"  >
+					<span class="item-title">{{adv.itemName}}</span> | <span class="item-detail">{{adv.description}}</span>
+				</div>
+				<div ng-show="adv.auctionPrice" class="item-price">
+					Auction Starting : <strong>${{adv.auctionPrice}}</strong>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+	<div ng-show="allBuy" class="allSale-list">
+		<div class="page-header">
+			<h5>All Buy It Now</h5>
+		</div>
+		<div ng-repeat="adv in userSaleData " data-ng-if ="adv.fixedPrice >0 " class="adv-card-sale">
+			<div class="img-card-sale">
+				
+			</div>
+			<div class="item-content-sale">
+				<div class="item"  >
+					<span class="item-title">{{adv.itemName}}</span> | <span class="item-detail">{{adv.description}}</span>
+				</div>
+				<div ng-show="adv.fixedPrice" class="item-price">
+					Buy it Now Price : <strong>${{adv.fixedPrice}}</strong>
+				</div>
+				<div ng-show="adv.fixedQuantity" class="item-price">
+					 Quantity left : <strong>{{adv.fixedQuantity}}</strong>
+				</div>
+				<div style="font-size: 12px" ng-if="adv.fixedQuantity<=0" class="item-price">
+					  <strong>Sold out</strong>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</section>

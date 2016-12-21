@@ -1,0 +1,147 @@
+<div ng-show ="success" class="banner">
+	<div class="background-sell">
+		
+		<div class="main-sell-msg">
+			
+			<h1> You have scucessfully added the product </h1>
+			 <div class="option">
+			 <a ng-click="success=false" class="btn btn-success buttonSelected shopnow" >Add more </a>
+			 <a  ng-click="goHome()" class="btn btn-success buttonSelected shopnow"> Continue Shopping </a>
+			 </div>
+		</div>
+
+	</div>
+
+
+</div>
+
+<div class="jumbotron"  ng-init="clickJumbo=1" ng-show="clickJumbo">
+	<div class="start-sell" ng-init="clickit=1" ng-show="clickit">
+	<h1> Its time to start making money</h1>
+	 <button class="btn btn-primary"   ng-click="clickit=0" btn-sell" >Start Selling</button>
+	 </div>
+	 <div class="sell-ques" ng-hide="clickit">
+		<div class="ques">
+			<h2>
+				What do you want to sell?
+			</h2>
+		</div>
+		<div class="sell-text">
+			<input type="search" ng-model="sell.item" class="sell-item" placeholder="Give your listing a descriptive title...">
+			<button class="sell-it" ng-click="clickJumbo=0">Sell it</button>
+			<a class="create-listing" ng-click="clickit=1" >Cancel</a>
+		</div>
+		<div class="sell-example">
+			 Example: Men’s blue adidas glide running shoes size 11
+		</div>
+
+	 </div>
+</div>
+
+<div class="selling-section">
+
+	<div class="selling-card">
+		<div class="desc-item-head">
+			<h2>Describe your item</h2>
+		</div>
+
+		<div class="sell-items row">
+			<div class="col-md-4 col-lg-4">
+				<label for="">Title</label>
+			</div>
+			<div class="col-md-8 col-lg-4">
+				<div class="inp-desc">
+				  <input type="text" class="form-control"  ng-model="sell.itemName" value="sell.item" class="form-control">
+				 </div>
+			</div>
+		</div>
+		<div class="sell-items row">
+			<div class="col-md-4 col-lg-4">
+				<label for="">Categories</label>
+			</div>
+			<div class="col-md-8 col-lg-4">
+				<div class="inp-desc">
+				  <input type="text"  class="form-control" ng-model="sell.category">
+				 </div>
+			</div>
+		</div>
+		<div class="sell-items row">
+			<div class="col-md-4 col-lg-4">
+				<label for="">Description</label>
+			</div>
+			<div class="col-md-8 col-lg-4">
+				<div class="inp-desc">
+				  <input type="text" ng-model="sell.description" class="form-control" name="item-desc" ></input>
+				 </div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="selling-card">
+		<div class="desc-item-head">
+			<h2>Select format and price</h2>
+		</div>
+		<div class="sell-items row">
+			<div class="col-md-4 col-lg-4">
+				<label for="">Listing Format</label>
+			</div>
+			<div class="col-md-4 col-lg-4">
+				<div ng-init="showauction=0"  class="auction-label">
+					Auction is best when you're not sure how much your item could sell for
+				</div>
+				<div class="format-btn">
+				  <button  ng-click="toggle('auction')" ng-class="classAuction" class="btn btn-primary">Auction</button>
+				</div>
+			</div>
+			<div class="col-md-4 col-lg-4">
+				<div ng-init="showFixed=0"  class="auction-label">
+					Fixed price is best when you know how much you want to get. 
+				</div>
+				<div class="format-btn">
+				  <button ng-click="toggle('fixed')" ng-class="classFixed" class="btn btn-primary">Fixed Price</button>
+				</div>
+			</div>
+		</div>
+		<div ng-show="showauction" class="auction-price">
+			<div class="sell-items row">
+				<div class="col-md-4 col-lg-4">
+					<label for="">Starting Price</label>
+				</div>
+				<div class="col-md-8 col-lg-4">
+					<div class="inp-desc">
+					  <input type="number"  min="0.01" ng-model="sell.auctionPrice" class="form-control" name="item-desc" ></input>
+					 </div>
+				</div>
+		   </div>
+			<div class="sell-items row">
+				<span class="sell-duration"> Item will be listed  for 4 days </span>
+			</div>
+		</div>
+		<div  ng-show="showFixed" class="fixed-price">
+			<div class="sell-items row">
+				<div class="col-md-4 col-lg-4">
+					<label for="">Price</label>
+				</div>
+				<div class="col-md-8 col-lg-4">
+					<div class="inp-desc">
+					  <input type="number"  min="0.01" ng-model="sell.fixedPrice" class="form-control" name="item-desc" ></input>
+					 </div>
+				</div>
+		   </div>
+		   <div class="sell-items row">
+				<div class="col-md-4 col-lg-4">
+					<label for=""> Quantity</label>
+				</div>
+				<div class="col-md-8 col-lg-4">
+					<div class="inp-desc">
+					  <input type="number"  min="1" ng-model="sell.fixedQuantity" class="form-control" name="item-desc" ></input>
+					 </div>
+				</div>
+		   </div>
+		</div>
+		<div class="list-it">
+			<button class="btn btn-primary" ng-click="advertise()"> List it</button>
+		</div>
+	</div>
+
+</div>

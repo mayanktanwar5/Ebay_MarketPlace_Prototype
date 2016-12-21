@@ -1,0 +1,58 @@
+
+ <div ng-include ="'../angularjs/templates/header.html'">
+ 	
+ </div>
+
+
+<section class="card-buy">	
+<div class="container-fluid">
+	
+	<div class="advertisement">
+		
+		<div class=" col-lg-6 col-md-6 colsm-6 col-xs-6">
+			<div class="adv-image">
+				
+			</div>	
+		
+		</div>
+		<div class="adv-desc col-lg-6 col-md-6 colsm-6 col-xs-6">
+				
+			<div class="page-head"  >
+				<strong><p>{{adv.itemName}} | <span style="font-size: 20px">{{adv.description}}</span></p></strong>
+			</div>
+			<div ng-hide="adv.bid_by" class="items-left" >
+				<span>Only <strong>{{adv.fixedQuantity}}</strong> in stock </span>
+				<select ng-change="changedQuantity(quantity)" ng-model ="quantity" ng-init="items =getNumber(adv.fixedQuantity)" >
+				<option  ng-init="innerIndex=$index" ng-repeat="q in items " >{{innerIndex+1}}</option>
+				</select>
+			</div>
+			
+			<div class="price-options">
+				<div ng-hide="adv.auctionPrice" class="price col-md-6 ">
+				Price:  <strong>US$</strong>{{adv.fixedPrice}}
+				</div>
+				<div ng-show="adv.auctionPrice" class="price col-md-6 ">
+				Auction Price:  <strong>US$</strong>{{adv.auctionPrice}}
+				</div>
+				
+				<div class="button-buy">
+				<button  ng-hide ="goTocart" class ="btn btn-primary buy-it-now " ng-click="checkout()"> Buy it Now</button>
+			    <button ng-init= "cart =1" ng-show = "cart" class ="btn btn-primary add-to-cart"  ng-click="addToCart()" class ="addCart">Add to Cart</button>
+			   <button ng-show ="goTocart" class ="btn goToCart btn-success"  ng-click="showCart()" >Go to cart</button>
+			   </div>
+			   <div class="user-won-bid" ng-show="adv.auctionPrice" class="price col-md-6 ">
+				Your winning Bid Price:  <strong>US$</strong>{{adv.bid_price}}
+				Quantity : 1
+				</div>
+			</div>
+			<div  ng-if="quantity>1" class="priceTotal col-md-6 ">
+				Total Price for {{quantity}}:  <strong>US$ </strong>{{totalPrice}}
+			</div>
+				
+		</div>
+	</div>
+</div>
+</section>
+
+
+</section>

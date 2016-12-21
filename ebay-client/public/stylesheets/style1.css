@@ -1,0 +1,1351 @@
+body
+{
+	height: 100%;
+	background: url("../images/bg_image.jpg") repeat 0 0 #f8f8f8;
+    color: #333;
+    font-size: 14px;
+    font-family: "Helvetica neue",Helvetica,Arial,Sans-serif;
+    line-height: 1;
+}
+
+.card
+{
+
+max-width:400px;
+margin: 30px auto;
+
+}
+
+
+.ebay-logo
+{
+	
+ height: 45px;
+ 	
+}
+.main-logo
+{
+	text-align: center;
+    margin-bottom: 20px;
+}
+
+.ebay-form-main
+{
+	width: 99%;
+    margin: auto;
+    background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: medium none!important;
+}
+.ebay-form
+{
+	width:90%;
+	margin: 20px auto;
+	position: relative;
+}
+.navigation
+{
+
+	height:45px;
+}
+.header-ht
+{
+height: 40px;
+}
+
+.btn-signin 
+{
+	border-style: none solid solid none;
+    border-radius: 3px 0 0 3px;
+    float: left;
+    height: 45px;
+    background-color: #eee;
+    border: 1px solid #d6d6d6;
+    width: 48%!important;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 45px;
+}
+
+
+
+.btn-signup
+{
+	height: 45px;
+    float: right;
+    width: 49%;
+    color: #555;
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 45px;
+}
+
+
+.tab-disable
+{
+	    color: #0654ba!important;
+	    display: inline-block;
+	    font-weight: 200;
+}
+.btn-signin .fa ,.btn-signup .fa
+{
+	display: inline-block!important;
+    background-repeat: no-repeat;
+    width: 30px;
+    position: relative;
+    height: 30px;
+    left: 7%;
+    margin-right: 10px;
+    font-size:25px;
+    color:#444;
+   
+}
+
+.form-text ,.form-name
+{
+
+	margin-bottom: 20px;
+	height: 36px;
+	position:relative;
+	
+}
+.form-text input[type=text],.form-text input[type=password],.form-name input[type=text],.form-text input[type=tel]
+
+
+{
+	font-size: 16px;
+	color: #333;
+	border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.8),inset 0 1px 2px rgba(0,0,0,0.06); 
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.form-text input[type=password]
+{
+	padding-right: 81px;
+}
+
+.form-text input:focus ,.form-name input:focus 
+{
+
+	/*box-shadow: none;*/
+	border: 1px solid #aaa;
+	transition: border .1s linear 0s,box-shadow .2s linear 0s;
+	-webkit-transition: border .1s linear 0s,box-shadow .2s linear 0s;
+	
+}
+
+
+.form-name
+{
+
+	display:inline-block;
+}
+
+.form-first-name,.form-last-name
+{
+	display:inline-block;
+	width:48%;
+	height: 36px;
+}
+
+.form-first-name
+{
+	margin-right: 10px;
+}
+.form-pwd-show
+{
+	position: absolute;
+	right:10px;
+	line-height: 20px;
+    font-size: 14px;
+	z-index:10;
+	display: inline-block;
+	top:10px;
+}
+
+.form-pwd-show input ,.form-pwd-show input:hover
+{
+	margin-right:5px;
+	clear: left;
+    float: left;
+    height: 22px;
+    width: 22px;
+	background-position: -266px -121px;
+	top:-5px;
+	position:relative;
+	cursor: pointer;
+}
+.form-pwd-show span:hover
+{
+	color: #0654ba;	
+}
+.form-pwd-show span
+{
+	font-size: 12px;
+	color: #777;
+	cursor: pointer;
+}
+
+.form-terms,.form-pwd-requirement
+{
+	font-size: 12px;
+    font-family: 'Helvetica neue',Helvetica,Arial,sans-serif;
+    line-height: 17px!important;
+    color: #555;
+    padding: 10px 0!important;
+}
+.signin-text
+{
+	top:-3px;
+	position: relative;
+	font-weight: 200;
+}
+
+.form-error
+{
+	color: #dd1e31;
+    display: block;
+    font-size: 12px;
+    margin:5px; 
+    position: relative;
+}
+
+.login-option
+{
+	position: relative;
+	/*margin-top: 5px;*/
+	font-size: 12px;
+    color: #666;
+    width: 100%;
+    line-height: 30px;
+
+
+}
+.stay-signin
+{
+	float:left;
+	width: 48%;
+}
+
+.pwd-forget
+{
+	float:right;
+	width: 48%;
+
+}
+.login-advice
+{
+	position: relative;
+	top:-5px;
+}
+.stay-signin input
+{
+float:left;
+top:4px;
+position: relative;
+}
+.stay-signin span
+{
+	margin-left:5px; 
+	float:left;
+}
+
+.welcome-msg p
+{
+	margin-left: 30px;
+    font-size: 1.429em;
+    padding-top: 13px;
+    font-weight: 500;
+    float:left;
+
+}
+
+.welcome-msg
+{
+	color: #209900;
+	
+	display: inline-block;
+	margin-bottom: 40px;
+}
+
+.welcome-msg .fa
+{
+font-size: 44px;
+float:left;
+}
+
+.form-pwd-requirement ul
+{
+	
+	position: relative;
+	top:-20px;
+	margin-bottom: 0; 
+	margin-top:5px;
+}
+
+input.ng-invalid.ng-dirty.ng-touched
+{
+border:1px solid  #dd1e31;	
+}
+
+input.ng-valid.ng-dirty
+{
+border:1px solid  green;	
+}
+
+.form-state ,.form-zipCode
+{
+
+	width:48%;
+	display: inline-block;
+}
+
+.ebay-header
+{
+	min-width: 320px;
+	font-family: "Helvetica Neue",Helvetica,Arial,Verdana,Sans-serif!important;
+	position: relative;
+    margin: 0;
+   
+    white-space: nowrap;
+    text-align: left;
+}
+
+.top-header
+{
+	background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 30px;
+    box-sizing: initial;
+    box-shadow: 3px 3px #ccc  ;
+    
+}
+.user-shrt
+{
+	margin-top: 5px;
+	text-align: left;
+	display: block;
+	padding-left: 0;
+	margin-left:2px;
+}
+.user-shrt li
+{
+   list-style: none;
+   display: inline-block;
+   font-size: 12px;
+   margin: 0;
+   background-position: -498px -35px;
+   padding: 0 9px 0 11px;
+   border-left:1px solid black;
+}
+.shp-cart
+{
+	
+    
+    z-index: 99999;
+    position: relative;
+    font-size: 12px;
+    margin-top: 5px;
+    padding: 0;
+    margin-right:30px;
+    list-style: none outside none;
+}
+.shp-cart li
+{
+	display: inline-block;
+    vertical-align: middle;
+    position: relative;
+
+    white-space: nowrap;
+    margin: 0 3px;
+    list-style: none;
+}
+
+#username
+{
+ border:none;
+
+}
+
+.nav
+{
+	color: #333;
+    cursor: pointer;
+    text-decoration: none;
+}
+.nav:hover
+{
+	text-decoration: none;
+}
+
+.bottom-header
+{
+	display: inline-block;
+	/*margin-top: 10px;*/
+	width: 100%;
+	color: #555;
+	
+	font-size: 14px;
+	white-space: normal;
+	word-break: normal;
+	line-height: 14px;
+	display: inline-block;	
+	text-align: left;
+	padding: 20px;
+	height:40px;
+}
+
+.shp-by-categ
+{
+	line-height: 30px;
+
+}
+
+.shp-by-categ span
+
+{
+	margin-left: 90px;
+}
+.jumbotron
+{
+	
+height: 500PX;
+max-width: 700px;
+max-width: 99%;
+margin: 0 auto;
+background:url("../images/hero_card_background.png") no-repeat center ;
+background-size: cover;
+background-color: transparent;
+padding: 40px 10px;
+text-align: center;
+position: relative;
+top: 164px;
+-webkit-transform: translateY(-50%);
+transform: translateY(-50%);
+font-family: "Helvetica Neue",Helvetica,Arial,Roboto,sans-serif;
+font-size: .875rem;
+color: #333;
+line-height: 1;
+}
+
+.jumbotron h1
+{
+	font-family: "Helvetica Neue","Segoe UI",Helvetica,Arial,sans-serif;
+line-height: 1.25;
+font-size: 5.125rem;
+font-weight: lighter;
+margin: 100px 0 20px;
+
+}
+
+.btn-sell
+{
+	width: 200px;
+	background: #0654ba;
+}
+
+.ebay-sell-header
+{
+	height:100%;
+	width:100%;
+	position: relative;
+	
+}
+.ebay-sell
+{
+	position: relative;
+	margin: 10px;
+}
+.ebay-logo-sell
+{
+   height:60px;
+   width:100px;
+
+}
+
+.ebay-sell-head
+{
+	/*background-color: white;*/
+	height: 80px;
+}
+
+.ques
+{
+position: relative;
+font-family: "Helvetica Neue","Segoe UI",Helvetica,Arial,sans-serif;
+font-size: 1.75rem;
+color: #333;
+font-weight: lighter;
+
+/*padding-bottom: 1rem;*/
+}
+
+.sell-text
+{
+	text-align: center;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+    line-height: 1;
+    color: #333;
+    
+}
+
+.sell-item
+{
+
+width: 50%;
+font-size: 2rem;
+font-weight: 300;
+background: #fff;
+border: 1px solid #d3d3d3;
+border-radius: 3px;
+box-sizing: border-box;
+border-top-right-radius: 0;
+border-bottom-right-radius: 0;
+height: 55px;
+}
+.sell-it
+{
+border-radius: 3px;
+position: absolute;
+border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+left:70%;
+font-size: 2rem;
+color: #fff;
+background-color: #0654ba;
+border: 1px solid #0654ba;
+height:55px;
+width:100px;
+}
+
+.create-listing
+{
+	position: absolute;
+	color:#0654ba;
+	/*margin-left:150px;
+	font-size: 2rem;*/
+    left: 80%;
+    line-height: 55px;
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+a:hover
+{
+	text-decoration:none;
+	cursor: pointer;
+}
+
+.sell-ques:focus
+{
+ border:0;
+ box-shadow: 0;
+ outline: none;
+
+}
+
+.sell-example
+{
+
+color: #555;
+font-size: 2rem;
+margin-top:20px ;
+/*font-weight:lighter;*/
+position: relative;
+}
+.sell-ques
+{
+
+	margin-top: 100px;
+}
+
+.selling-card
+{
+	 border: 1px solid #ddd;
+	 width:70%;
+	 margin:20px auto;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 17px 20px;
+    font-family: "Helvetica neue",Helvetica,Arial,Sans-serif;
+      color: #333;
+}
+.desc-item-head
+{
+	margin-bottom: 20px;
+
+}
+.sell-items
+{
+	margin-bottom: 20px: 
+}
+
+.sell-items label
+{
+	color: #666;
+display: inline-block;
+font-size: medium;
+font-weight: normal;
+margin-top: 4px;
+margin-left: 12px;
+}
+.auction-label
+{
+	display: inline-block;
+    vertical-align: top;
+    width: 215px;
+}
+.nobid
+{
+	display: none;
+}
+
+.bid
+{
+	display: block; 
+}
+
+.buttonSelected
+{
+	background-color: transparent;
+	border-radius:5px;
+	border:2px solid grey;
+	color :grey;
+}
+
+
+
+.payment-method
+{
+
+	position:relative;
+	width:40%;
+	margin:150px auto;
+	border-radius: 5px;
+	box-shadow: 5px;
+	border:2px solid blue;
+
+}
+
+.credit-details
+{
+	margin: 20px;
+}
+.credit-details input
+{
+
+		border:none;
+		border-bottom: 2px solid grey;
+		box-shadow: none;
+		border-radius: 0;
+		position: relative;
+		background: transparent;
+		z-index:1;
+
+}
+.credit-details input:focus
+{
+
+		border:none;
+		border-bottom: 2px solid blue;	
+		border-radius: 0;
+		border-color:none;
+		box-shadow: none;
+		
+
+}
+.credit-details.ng-valid
+{
+	background:white;
+}
+
+.credit-details .row
+{
+
+	margin-bottom:10px;
+	text-align: center;
+}
+.credit-details .row button
+{
+	margin-top:10px;
+	width:100px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.payment-error
+{
+	position: relative;
+	color:red;
+	margin:15px;
+}
+.credit-details label
+{
+	position: absolute;
+	left:26px;
+	color:#aaa;
+	transition: .1s all linear;
+	font-weight: 0;
+	z-index:-1;
+
+
+}
+
+
+
+#card-number:focus +  label
+{
+	top:8px;
+	font-size: 10px;
+	font-family: inherit;
+
+}
+.s
+{
+	top:10px;
+}
+.p
+{
+	top:27px;
+}
+
+.credit-details input:focus + label
+{
+	top:0px;
+	font-size: 10px;
+	
+}
+.empty-cart
+{
+
+	background: url("../images/empty-cart.png") no-repeat center;
+	background-size: cover;
+	color:white;
+	letter-spacing: 5px;
+	 font-family: "Helvetica neue",Helvetica,Arial,Sans-serif;
+	 font-size: 40px;
+	 height: 700px;
+	 max-height:800px;
+	 width:100%;
+
+}
+.shopnow
+{
+
+letter-spacing: 2px;
+width:300px;
+font-size: 20px;
+margin-top:50px;
+}
+
+.item-in-cart
+{
+
+	/*margin:100px auto;*/
+}
+
+.empty-content
+{
+
+	left:20%;
+	top:30%;
+	position: absolute;
+	font-weight: lighter;
+	text-align: center;
+}
+
+.banner
+{
+
+	position: absolute;
+	height: 100%;
+	width:100%;
+	background-color: rgba(0,0,0,0.7);
+	z-index:10;
+
+}
+.background
+{
+
+	width:60%;
+	margin:50px auto;
+	background: url("../images/thanks.jpg") no-repeat center ;
+	background-size: cover;
+	border-radius:10px;
+	text-align: center;
+	z-index:100;
+	height:500px;
+
+}
+
+.main-msg
+{
+
+	position: absolute;
+	font-family: cursive;
+	font-weight: lighter;
+	margin:150px;
+	color:#555;
+	height:150px;
+}
+
+.background-sell
+{
+
+	width:60%;
+	margin:50px auto;
+	background-color:rgba(7,7,7,0.7); 
+	border-radius:10px;
+	text-align: center;
+	z-index:100;
+	height:500px;
+	font-family: "Helvetica neue",Helvetica,Arial,Sans-serif;
+
+}
+
+.main-sell-msg
+{
+
+	position: absolute;
+	font-weight: lighter;
+	margin:50px;
+	color:white;
+	height:150px;
+}
+
+.option
+{
+	display: block;
+	margin-top: 50px;
+	position: absolute;
+	left:30%;
+}
+
+.option a
+{
+
+	display: block;
+	margin-top:30px;
+	left:50%;
+}
+
+.card-buy
+{
+
+	width:80%;
+	position: relative;
+	height: 100%;
+	margin-top: 50px;
+}
+
+.advertisement 
+{
+
+	position: relative;
+	height: 100%;
+	margin-top:20px; 
+	
+}
+
+.adv-image
+{
+	background: url("../images/product.jpg") no-repeat center;
+	background-size: cover;
+	box-shadow: 1px grey;
+	height: 350px;
+	width:100%;
+	border-radius:5px;
+}
+.adv-desc
+{
+	height: 300px;
+}
+.page-head
+{
+	display: inline-block;
+	margin: 10px;
+	font-size: 30px;
+	font-family: "Helvetica neue",Helvetica,Arial,Sans-serif;
+	border-bottom: 2px solid grey;
+
+}
+
+.items-left
+{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	
+
+}
+.items-left select
+{
+	margin-left:10px;
+	width:100px;
+	height: 30px;
+}
+
+.button-buy
+{
+	float:right;
+	display: inline-block;
+	position: absolute;
+	right:20%;
+	/*bottom:60px;*/
+	margin-top:30px;
+	margin-right: 20px;
+	/*line-height:40px;*/
+	
+}
+.price
+{
+/*	margin-left:20px;*/
+margin-top:40px;
+}
+
+.price-options
+{
+
+	background-color: #ccc;
+	height:100px;
+	border-radius:2px;
+}
+
+.add-to-cart
+{
+	background-color: #45aad6;
+}
+
+.priceTotal
+{
+	font-size:20px;
+	margin-top:20px;
+	display: block;
+	font-weight: bold;
+	background-color: grey;
+	border-radius: 10px;
+	width:100%;
+	text-align: center;
+	height:80px;
+	line-height: 80px;
+}
+.goToCart
+{
+	width:200px;
+}
+
+.userHome-card
+{
+	width:95%;
+	margin:50px auto;
+	height: 100%;
+}
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+
+  .offers-carousal
+  {
+
+  	height: 300px;
+  	width:100%;
+  }
+
+  .adv-card
+  {
+  	background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+	position: relative;
+    display: inline-block;
+    float:left;
+    width: 5%;
+    min-width: 365px;
+    height: 190px;
+    padding: 15px;
+    text-decoration: none;
+    font-family: "Helvetica Neue","HelveticaNeueRoman","HelveticaNeue-Roman","Helvetica Neue Roman",'TeXGyreHerosRegular',"Helvetica","Tahoma","Geneva","Arial",sans-serif;
+    font-weight: 400;
+    font-stretch: normal;
+    margin:10px;
+
+  }
+
+  .img-card
+  {
+  	height: 100%;
+    width: 160px;
+    float: left;
+    background:url("../images/product.jpg") no-repeat center;
+    background-size: cover;
+  }
+.item-content
+{
+	position: relative;
+    height: 100%;
+    margin-left: 180px;
+    
+}
+
+.item-title
+{
+	
+    margin-top: 0;
+    margin-bottom: 6px;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1.2;
+    overflow: hidden;
+}
+
+.item-detail ,.item-price ,.item-seller
+{
+	margin-bottom: 6px;
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 1.2;
+    overflow: hidden;
+}
+
+.item-price ,.item-seller 
+{
+margin-top: 10px;
+font-size: 16px;
+}
+
+.item-seller
+{
+
+}
+.item-button
+{
+	text-align: center;
+	margin-top: 10px;
+}
+.item-button button
+{
+	width:100px;
+}
+
+.winner-bid
+{
+	font-size:10px;
+}
+
+.seller-name
+{
+	font-size:12px;
+}
+
+.my-items
+{
+
+	display: inline block ;
+	text-align: left;
+	background-color: #ccc;
+	border:1px solid black;
+	border-radius:2px;
+	margin:5px; 
+	position: relative;
+	
+
+	
+}
+
+.cart-card
+{
+
+	width:95%;
+	margin:50px auto ;
+	background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+	position: relative;
+    display: inline-block;
+    height: 100%;
+}
+.item-in-cart
+{
+	position: relative;
+	height: 100%;
+	width:95%;
+	margin: 20px auto;
+}
+.cart-item-content
+{
+	width:95%;
+	margin:10px auto;
+}
+.itemspace
+{
+	margin-bottom: 10px;
+}
+
+.button-remove
+{
+	width:250px;
+	background-color: transparent;
+	border:2px solid orange;
+	margin-top: 50px;
+	color:orange;
+}
+
+ .btn[disabled], fieldset[disabled] .btn
+{
+background-color: #337ab7;
+
+}
+
+.profile-card
+{
+	width: 80%;
+	margin: 50px auto;
+}
+
+.back-banner
+{
+
+	background:url("../images/profile-banner.jpg") no-repeat center;
+	background-size: cover;
+	width:100%;
+	position: relative;
+	height:270px;
+
+}
+
+.user-avatar-tab
+{
+
+	position: relative;
+background: #f9f9f9;
+	width:97%;
+	height: 160px; 
+	margin: -168px auto 4px;
+    position: relative;
+    box-shadow: 0 0 5px 0 #CCC;
+}
+
+
+
+
+.user-avatar-con
+{
+	width: 150px;
+    height: 150px;
+    display: table;
+    text-align: center;
+    vertical-align: middle;
+    margin: 7px 0 0 7px;
+    position: relative;
+ 
+}
+
+.user-avatar
+{
+	height:150px;
+	width:150px;
+	
+	display: table-cell;
+}
+
+.user-avatar img
+{
+	    
+	    margin-top:9px;
+	    border: 1px solid #DDD;
+}
+.profile-name
+{
+	position: absolute;
+    top: 15px;
+    left: 170px;
+    font-size: 14px;
+}
+.profile-edit
+{
+	position: absolute;
+    top: 70px;
+    left: 170px
+}
+
+.profile-edit button
+{
+	border:1px solid #aaa;
+    background: #fafafa;
+    color: #025da1;
+}
+.member-info
+{
+	list-style: none;
+	display: inline-block;
+	margin: 0 5px;
+    color: #666;
+}
+.member-info li
+{
+	display: inline-block;
+	padding-right:10px;
+	text-align: center;
+}
+
+#profile-state
+{
+	border-left:2px solid #999;
+	padding-left: 10px;
+}
+.header-logo
+{
+	height:93px;
+	width:50px;
+}
+.cat-box
+{
+	position: absolute;
+    margin-top: -34px;
+    right: 10px;
+    width: 30%;
+    text-align:center;
+    border-top-left-radius: none;
+    border-bottom-left-radius:none;
+}
+.button-search
+{
+	width:100px;
+	 
+}
+.search
+{
+	width:70%;
+	border-right: none;
+}
+
+.showSale
+{
+	border: 1px solid #DDD;
+    border-radius: 3px;
+    background-color: white;
+    box-shadow: 4px 4px 1px #EEE;
+    padding: 17px 20px 9px;
+    margin-bottom: 20px;
+    width:60%;
+    margin:50px auto;
+}
+
+.salenav
+{
+	position: relative;
+
+
+}
+.salenav ul ,li
+{
+	list-style: none;
+	display: inline-block;
+}
+.salebtn
+{
+	border: 1px solid #aaa;
+}
+.img-card-sale
+  {
+  	height: 100%;
+    width: 70px;
+    float: left;
+    background:url("../images/product.jpg") no-repeat center;
+    background-size: cover;
+  }
+.item-content-sale
+{
+	position: relative;
+    height: 100%;
+    margin-left: 90px;
+    
+}
+
+.allsale
+{
+	margin-top: 50px;
+}
+
+.adv-card-sale
+  {
+  	background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+	position: relative;
+    display: inline-block;
+    float:left;
+    
+    min-width: 120px;
+    height: 100px;
+    padding: 15px;
+    text-decoration: none;
+    font-family: "Helvetica Neue","HelveticaNeueRoman","HelveticaNeue-Roman","Helvetica Neue Roman",'TeXGyreHerosRegular',"Helvetica","Tahoma","Geneva","Arial",sans-serif;
+    font-weight: 400;
+    font-stretch: normal;
+    margin:20px;
+
+  }
+
+  .myebay-card
+  {
+
+  	
+  	margin-top: 100px;
+  }
+  .user-won-bid
+  {
+  	position: absolute;
+  	margin-top:30px: 
+  }
+.bid-advertisement
+{
+	margin:50px;
+	position: relative;
+}
+.bid-item-content
+{
+
+	margin-top: 20px;
+	background: none repeat scroll 0 0 #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+	position: relative;
+    display: inline-block;
+    float:left;
+    height:300px;
+    
+}
+
+.bid-item
+{
+	position: relative;
+	/*display: block;*/
+	margin: 20px;
+}
+
+.bid-display-item
+{
+	display: inline-block;
+}

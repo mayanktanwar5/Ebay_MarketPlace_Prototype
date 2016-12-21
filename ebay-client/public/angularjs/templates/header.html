@@ -1,0 +1,43 @@
+<header class="ebay-header">
+	
+	<div class="top-header">
+		<ul class="pull-left user-shrt">
+			<li id="username">Hi <strong>{{username}}</strong></li>
+			<li><a class="nav" ui-sref="userHome.userProfile">Profile</a></li>
+			<li><a  class="nav" ui-sref="userHome.sell">Sell</a></li>
+			<li><a class="nav" href="">Bids</a></li>
+			<li><a class="nav" ng-hide="atHome" ui-sref="userHome">Home</a></li>
+			<li><a ng-show="showLoggedIn" class="nav" href=""><strong>Last Logged in : </strong> {{lastloggedin}}</a></li>
+
+		</ul>
+		<ul class="pull-right shp-cart">
+			<li><a ui-sref="ebayHandle">My ebay</a></li>
+			<li><a ui-sref="myCart"><i  class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+			<li> <a ng-click="userLogout()">Logout</a></li>
+		</ul>
+	</div>
+	<div class="bottom-header">
+		<div class="row header-ht">
+			<div class="col-md-3 col-lg-3 col-sm-3">
+				<div class=" pull-left header-logo btm "><a ui-sref="userHome"><img class="ebay-logo" src="./images/ebay-logo.png" ></a>
+			</div>
+			<div class="shp-by-categ btm ">
+				<span style="display: inline-block;">Shop by Category <i style="padding-left:10px;" class="fa fa-caret-down" aria-hidden="true"></i></span>
+			</div>
+			</div>
+			<div class="col-md-6 col-lg-6">
+			<div class="search btm ">
+				<input type="text" class="form-control" placeholder="Search..">
+			</div>
+			<div class="cat-box form-control btm ">
+				<span  style="display: inline-block;">All Categories <i  style="padding-left:10px;" class="fa fa-caret-down" aria-hidden="true"></i></span>
+			</div>
+			</div>
+			<div class="col-lg-3 col-md-3">
+			<div class="button-search btm ">
+				<button class="btn form-control btn-primary">Search</button>
+			</div>
+			</div>
+		</div>
+	</div>
+</header>

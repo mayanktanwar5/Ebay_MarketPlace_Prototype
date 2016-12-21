@@ -1,0 +1,185 @@
+ <div ng-include ="'../angularjs/templates/header.html'">
+ 	
+ </div>
+<section class="myebay-card" >
+	
+
+	<div class="salenav">
+		
+		<ul><li><a ng-click="toggleShow('bought')" ng-class="selectedbought" class="salebtn btn btn-primary">ALl Bought ({{totalItemsBought}})</a></li><li><a  ng-class="selectedsold" ng-click="toggleShow('sold')" class="salebtn btn btn-primary">All Sold ({{totalItems}})</a></li><li><a  ng-class="selectedbid" ng-click="toggleShow('bid')" class="salebtn btn btn-primary">All Bids ({{totalBids}})</a></li</ul>
+
+	</div>
+
+	<section ng-show ="allitemsbought" class="showSale">
+		
+		<div class="page-header">
+			<h2>Items bought</h2>
+		</div>
+
+		<div  class="allSale-list">
+			<div ng-repeat="adv in userBoughtData" class="adv-card-sale">
+			<div class="img-card-sale">
+				
+			</div>
+			<div  class="item-content-sale">
+				<div class="item"  >
+					<span style="font-size:10px" class="item-title">{{adv.itemName}}</span> | <span class="item-detail">{{adv.description}}</span>
+				</div>
+				<div ng-hide="adv.auctionPrice" style="font-size:10px" ng-show="adv.fixedPrice" class="item-price">
+					Bought it at Price : <strong>${{adv.fixedPrice}}</strong>
+				</div>
+				<div ng-hide="adv.auctionPrice" style="font-size:10px" class="item-price">
+					 Quantity bought : <strong>${{adv.quantity}}</strong>
+				</div>
+				<div ng-hide="adv.auctionPrice" style="font-size:10px"  class="item-price">
+					Total Amount paid : <strong>${{adv.quantity*adv.fixedPrice}}</strong>
+				</div>
+				<div ng-show="adv.auctionPrice" style="font-size:10px" ng-show="adv.fixedPrice" class="item-price">
+					Bought it at Price : <strong>${{adv.bid_price}}</strong>
+				</div>
+				<div ng-show="adv.auctionPrice" style="font-size:10px" class="item-price">
+					 Quantity bought : <strong>1</strong>
+				</div>
+				<div ng-show="adv.auctionPrice" style="font-size:10px"  class="item-price">
+					Total Amount paid : <strong>${{adv.bid_price}}</strong>
+				</div>
+				<div style="font-size:10px" class="item-price">
+					 Bought on : <strong>{{adv.bought_date}}</strong>
+				</div>
+			</div>
+
+		  </div>
+	   </div>
+
+	</section>
+
+
+
+
+<section ng-show="showSale" class="showSale">
+	<div class="page-header">
+		<h2>Items Sold</h2>
+	</div>
+	<div class="salenav">
+		
+		<ul><li><a ng-click="showItems('all')"  ng-class="selectedall" class="salebtn btn btn-primary">ALl listing</a></li><li><a ng-click="showItems('auctions')" ng-class="selectedauc" class="salebtn btn btn-primary">Auctions</a></li><li><a ng-class="selectedbuy" ng-click="showItems('buyItem')" class="salebtn btn btn-primary">Buy It Now</a></li></ul>
+
+	</div>
+
+	<div ng-show="allsale" class="allSale-list">
+		<div class="page-header">
+			<h5>All listing</h5>
+		</div>
+			<div ng-repeat="adv in userSaleData" class="adv-card-sale">
+			<div class="img-card-sale">
+				
+			</div>
+			<div class="item-content-sale">
+				<div class="item"  >
+					<span class="item-title">{{adv.itemName}}</span> | <span class="item-detail">{{adv.description}}</span>
+				</div>
+				<div ng-show="adv.fixedPrice" class="item-price">
+					Buy it Now Price : <strong>${{adv.fixedPrice}}</strong>
+				</div>
+				<div ng-show="adv.auctionPrice" class="item-price">
+					Auction Starting : <strong>${{adv.auctionPrice}}</strong>
+				</div>
+				<div ng-show="adv.fixedQuantity" class="item-price">
+					 Quantity left : <strong>{{adv.fixedQuantity}}</strong>
+				</div>
+				<div style="font-size: 12px" ng-if="adv.fixedQuantity<=0 && adv.auctionPrice<=0" class="item-price">
+					  <strong>Sold out</strong>
+				</div>
+
+
+			</div>
+
+		</div>
+	</div>
+
+	<div ng-show="allauctions" class="allSale-list">
+		<div class="page-header">
+			<h5>All Auctions</h5>
+		</div>
+		<div ng-repeat="adv in userSaleData " data-ng-if ="adv.auctionPrice >0 " class="adv-card-sale">
+			<div class="img-card-sale">
+				
+			</div>
+			<div class="item-content-sale">
+				<div class="item"  >
+					<span class="item-title">{{adv.itemName}}</span> | <span class="item-detail">{{adv.description}}</span>
+				</div>
+				<div ng-show="adv.auctionPrice" class="item-price">
+					Auction Starting : <strong>${{adv.auctionPrice}}</strong>
+				</div>
+				<div ng-show="adv.bid_price" class="item-price">
+					Auction Best Bid : <strong>${{adv.bid_price}}</strong>
+				</div>
+	</div>
+
+	<div ng-show="allBuy" class="allSale-list">
+		<div class="page-header">
+			<h5>All Buy It Now</h5>
+		</div>
+		<div ng-repeat="adv in userSaleData " data-ng-if ="adv.fixedPrice >0 " class="adv-card-sale">
+			<div class="img-card-sale">
+				
+			</div>
+			<div class="item-content-sale">
+				<div class="item"  >
+					<span class="item-title">{{adv.itemName}}</span> | <span class="item-detail">{{adv.description}}</span>
+				</div>
+				<div ng-show="adv.fixedPrice" class="item-price">
+					Buy it Now Price : <strong>${{adv.fixedPrice}}</strong>
+				</div>
+				<div ng-show="adv.fixedQuantity" class="item-price">
+					 Quantity left : <strong>{{adv.fixedQuantity}}</strong>
+				</div>
+				<div style="font-size: 12px" ng-if="adv.fixedQuantity<=0" class="item-price">
+					  <strong>Sold out</strong>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</section>
+<section ng-show="allbids" class="showSale">
+	<div class="page-header">
+			<h2>My  Bids</h2>
+		</div>
+
+		<div  class="allSale-list">
+			<div  style=" margin: 10px" ng-repeat="adv in userAllBids" class="adv-card">
+			<div class="img-card">
+				
+			</div>
+			<div  class="item-content">
+				<div class="item"  >
+					<span style="font-size:12px" class="item-title">{{adv.adv_item}}</span> | <span class="item-detail">{{adv.adv_desc}}</span>
+				</div>
+				<div  style="font-size:12px" ng-show="adv.fixedPrice" class="item-price">
+					Auction  Starting Price : <strong>${{adv.auction_price}}</strong>
+				</div>
+				<div style="font-size:12px" class="item-price">
+					 Your bid : <strong>${{adv.mybid}}</strong>
+				</div>
+				<div ng-show="adv.won_by"  style="font-size:12px"  class="item-price">
+					Bidding over Winning Bid : <strong>${{adv.bid_price}}</strong>
+				</div>
+				<div ng-if="adv.won_by ==adv.bid_by" style="font-size:12px"  class="item-price">
+					Bidding over You win Bid : <strong>${{adv.bid_price}}</strong>
+				</div>
+				<div style="font-size:12px" class="item-price">
+					 Bid on : <strong>{{adv.bid_date}}</strong>
+				</div>
+				<div style="font-size:12px"  class="item-price">
+					 Bid continues till : <strong></strong>
+				</div>
+			</div>
+
+		  </div>
+	   </div>
+
+</section>
+</section>

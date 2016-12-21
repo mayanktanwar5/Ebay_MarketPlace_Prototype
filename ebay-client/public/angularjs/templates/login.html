@@ -1,0 +1,61 @@
+<section class="card ">
+<div class="main-logo"><a ui-sref="home"><img class="ebay-logo" src="./images/ebay-logo.png" ></a></div>
+<div class="ebay-form-main">
+	<div class="navigation">
+		<div class="btn-signup pull-left">
+		<i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+		<span class="signin-text ">Sign in</span>	
+		</div>
+		<a ui-sref="signup">
+			<div class="btn-signin pull-right">
+				<i class="fa fa-plus-circle" aria-hidden="true"></i>
+				<span class="signin-text tab-disable">Register</span>	
+			</div>
+		</a>	
+	</div>
+	<div class="login-error"  ng-show="loginError">
+		<span style="text-align: center; margin-top: 15px;" class="form-error"><i style="font-size: 20px;"class="fa fa-exclamation-circle" aria-hidden="true"></i>
+		Oops, Email doesnot  exist, Please register</span>
+	</div>
+	<div class="login-error" ng-show="incorrectPassword">
+		
+		<span style="text-align: center; margin-top: 15px;" class="form-error"><i style="font-size: 20px;"class="fa fa-exclamation-circle" aria-hidden="true"></i>
+		Oops, incorrect Login/Password </span>
+	</div>
+	<div class="login-error" ng-show="emptyClick">
+		
+		<span style="text-align: center; margin-top: 15px;" class="form-error"><i style="font-size: 20px;"class="fa fa-exclamation-circle" aria-hidden="true"></i>
+		Oops, Please enter username and password</span>
+	</div>
+	<form name="ebayform" novalidate  ng-submit="userLogin()" >
+		<div class="ebay-form">
+			<div class="form-text form-email">
+			<input  class="form-control" ng-model="user.email" type="email"  required name="email" placeholder="Email">
+			<span class="form-error" ng-show="ebayform.email.$touched && ebayform.email.$invalid">Please enter a valid email</span>
+			</div>
+			<div class="form-text form-pwd">
+				<input  class="form-control" ng-model="user.password" type="password"  name="password" placeholder="Password">
+			</div>	
+			<div class="form-text">
+			 <button type="submit"  ng-disabled= "ebayform.$invalid" class="btn form-control btn-primary">Sign in</button>
+			</div>
+			<div class="login-option form-text">
+				<div class="stay-signin">
+					<input type="checkbox" id="stay-signin">
+					<span>Stay Signed in</span>
+				</div>
+			<div class="pwd-forget">
+				<span> <a href=""> Forgot your password </a> </span>
+			</div>
+		</div>
+		<div class="login-advice ">
+				<span>
+					Using a public or shared device? Uncheck to protect your account.Learn more
+				</span>
+			</div>
+
+		</div>
+	</form>
+
+</div>
+</section>
